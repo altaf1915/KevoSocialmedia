@@ -8,7 +8,7 @@ export const AuthContext = createContext(null);
 
 const AuthContextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://kevo-socialmedia-backend.onrender.com';
 
   const [token, setToken] = useState(cookie.get('token') || '');
   const [user, setUser] = useState(null);
